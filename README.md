@@ -1,10 +1,10 @@
-# 📘 Introduction to Statistical Learning with Python - Labs
+# Introduction to Statistical Learning with Python 
 
 This repository provides Python implementations of the labs from the book **Introduction to Statistical Learning (ISLR)**. The labs are designed to bridge theory and practice, offering hands-on coding exercises to reinforce the statistical concepts presented in the book.
 
 ---
 
-## 🚀 Features
+## Features
 - Python-based implementations of all ISLR labs.
 - Clear and structured examples for each statistical method.
 - Includes data loading, manipulation, visualization, and analysis.
@@ -12,10 +12,10 @@ This repository provides Python implementations of the labs from the book **Intr
 
 ---
 
-## 📂 Table of Contents
+## Table of Contents
 
 ### Chapter 1: Introduction
-- 🛠 **Lab 1.1**: Setting Up Your Python Environment  
+- 🔹 **Lab 1.1**: Setting Up Your Python Environment  
   A quick guide to setting up Python, installing necessary libraries, and preparing for statistical analysis.
 
 ### Chapter 2: Statistical Learning
@@ -109,25 +109,25 @@ This repository includes examples and exercises using the following datasets:
 - **Notes**: Contains information about various car models, their performance metrics, and specifications.
 
 ### Bike Sharing Data
-- **Source**: Data on bike-sharing systems, including user demand and environmental factors.
+- **Notes**: Data on bike-sharing systems, including user demand and environmental factors.
 
 ### Boston Data
 - **Notes**: Housing data for Boston, often used for regression analysis and modeling.
 
 ### Brain Cancer Data
-- **Source**: Clinical data related to brain cancer treatment outcomes.
+- **Notes**: Clinical data related to brain cancer treatment outcomes.
 
 ### Caravan Data
-- **References**: Includes information on caravan insurance policies for modeling purchase likelihood.
+- **Notes**: Includes information on caravan insurance policies for modeling purchase likelihood.
 
 ### Sales of Child Car Seats
 - **Notes**: Data on car seat sales, used for classification and regression tasks.
 
 ### U.S. News and World Report’s College Data
-- **Source**: Data on colleges and universities, including rankings and statistics.
+- **Notes**: Data on colleges and universities, including rankings and statistics.
 
 ### Credit Card Balance Data
-- **Source**: Information on customer credit card balances and associated attributes.
+- **Notes**: Information on customer credit card balances and associated attributes.
 
 ### Credit Card Default Data
 - **Notes**: Data on credit card holders, used for default prediction modeling.
@@ -139,32 +139,31 @@ This repository includes examples and exercises using the following datasets:
 - **Notes**: Statistics on baseball players, often used for regression and classification.
 
 ### Khan Gene Data
-- **Format**: Gene expression data, useful for clustering and classification tasks.
 - **Notes**: Includes labeled data for biological classification.
 
 ### NCI 60 Data
-- **Source**: Gene expression data from the NCI-60 cancer cell lines.
+- **Notes**: Gene expression data from the NCI-60 cancer cell lines.
 
 ### New York Stock Exchange Data
-- **Source**: Historical stock prices and trading data for modeling financial markets.
+- **Notes**: Historical stock prices and trading data for modeling financial markets.
 
 ### Orange Juice Data
-- **Source**: Data on sales of orange juice brands, used for classification.
+- **Notes**: Data on sales of orange juice brands, used for classification.
 
 ### Portfolio Data
 - **Notes**: Data on financial portfolios for optimization and analysis.
 
 ### Time-to-Publication Data
-- **Source**: Publication timelines and associated covariates.
+- **Notes**: Publication timelines and associated covariates.
 
 ### S&P Stock Market Data
-- **Source**: Historical data on the S&P stock market, used for forecasting and analysis.
+- **Notes**: Historical data on the S&P stock market, used for forecasting and analysis.
 
 ### Violent Crime Rates by US State
 - **Notes**: Crime statistics by state, often used in clustering and regression tasks.
 
 ### Mid-Atlantic Wage Data
-- **Source**: Data on wages in the Mid-Atlantic region, used for regression and exploration.
+- **Notes**: Data on wages in the Mid-Atlantic region, used for regression and exploration.
 
 ### Weekly S&P Stock Market Data
-- **Source**: Weekly S&P stock data for time series analysis.
+- **Notes**: Weekly S&P stock data for time series analysis.
