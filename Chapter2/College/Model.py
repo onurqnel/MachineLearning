@@ -97,6 +97,21 @@ cluster_size_composition = CollegeData.groupby('Cluster')['InstutionSize'].value
 print("\n=== Institution Size Composition by Cluster ===")
 print(cluster_size_composition)
 
+# 5C. Check the composition of Institution Type within each cluster.
+#     This shows the proportion of 'Private' vs. 'Public' colleges in each cluster.
+cluster_type_composition = CollegeData.groupby('Cluster')['Private'].value_counts(normalize=True)
+print("\n=== Institution Type Composition by Cluster ===")
+print(cluster_type_composition)
+
+# 5D. Count the number of colleges in each cluster.
+count_cluster_0 = (CollegeData['Cluster'] == 0).sum()
+count_cluster_1 = (CollegeData['Cluster'] == 1).sum()
+
+print(f"\nCount for cluster 0: {count_cluster_0}")
+print(f"Count for cluster 1: {count_cluster_1}")
+
+
+
 # ------------------------------------------------------------------
 # 6. Visualizations with Descriptive Information
 # ------------------------------------------------------------------
@@ -152,19 +167,11 @@ sns.boxplot(x='Cluster', y='Grad.Rate', data=CollegeData, palette='Set2')
 plt.title('Graduation Rate by Cluster', fontsize=14)
 plt.xlabel('Cluster', fontsize=12)
 plt.ylabel('Graduation Rate', fontsize=12)
+plt.ylim(0, 100)
 plt.tight_layout()
 plt.show()
 
-# 4) Acceptance Rate by Cluster
-plt.figure(figsize=(8, 6))
-sns.boxplot(x='Cluster', y='Accept', data=CollegeData, palette='Set2')
-plt.title('Acceptance Rate by Cluster', fontsize=14)
-plt.xlabel('Cluster', fontsize=12)
-plt.ylabel('Acceptance Rate', fontsize=12)
-plt.tight_layout()
-plt.show()
-
-# 5) PhD level Instructor Rate by Cluster
+# 4) PhD level Instructor Rate by Cluster
 plt.figure(figsize=(8, 6))
 sns.boxplot(x='Cluster', y='PhD', data=CollegeData, palette='Set2')
 plt.title('PhD level Instructor Rate by Cluster', fontsize=14)
@@ -173,7 +180,7 @@ plt.ylabel('PhD level Instructor Rate', fontsize=12)
 plt.tight_layout()
 plt.show()
 
-# 6) Student/Faculty Ratio by Cluster
+# 5) Student/Faculty Ratio by Cluster
 plt.figure(figsize=(8, 6))
 sns.boxplot(x='Cluster', y='S.F.Ratio', data=CollegeData, palette='Set2')
 plt.title('Student/Faculty Ratio by Cluster', fontsize=14)
@@ -182,6 +189,43 @@ plt.ylabel('Student/Faculty Ratio', fontsize=12)
 plt.tight_layout()
 plt.show()
 
+# Acceptence rate
+CollegeData['AcceptenceRate'] = (CollegeData['Accept'] / CollegeData['Apps']) * 100
+def classify_size(row):
+    if row['StudentCount'] > 5925:
+        return 'Large'
+    elif row['StudentCount'] < 1502:
+        return 'Small'
+    else:
+        return 'Medium'
+CollegeData['InstitutionSize'] = CollegeData.apply(classify_size, axis=1)
+Cluster1Data = CollegeData[CollegeData['Cluster'] == 1]
+print(Cluster1Data.describe())
+print(Cluster1Data)
+sns.scatterplot(
+    data=Cluster1Data, 
+    x='Grad.Rate',         
+    y='AcceptanceRate', 
+    hue='Private'           
+)
+plt.title('Acceptance Rate vs. Graduation Rate Top %25 Institutions')
+plt.xlabel('Graduation Rate (%)')
+plt.ylabel('Acceptance Rate of Institution (%)')
+plt.legend(title='Private')
+plt.show()
+
+# Scatter Plot 2: Acceptance Rate vs. S.F. Ratio with Hue by Institution Size
+sns.scatterplot(
+    data=Cluster1Data, 
+    x='Grad.Rate',         
+    y='AcceptanceRate', 
+    hue='InstitutionSize' 
+)
+plt.title('Acceptance Rate vs. Graduation Rate Top %25 Institutions')
+plt.xlabel('Graduation Rate (%)')
+plt.ylabel('Acceptance Rate of Institution (%)')
+plt.legend(title='Institution Size')
+plt.show()
 
 # ------------------------------------------------------------------
 # End of Script
