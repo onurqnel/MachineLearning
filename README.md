@@ -1,14 +1,11 @@
 # Introduction to Statistical Learning with Python 
 
-This repository provides Python implementations of the labs from the book **Introduction to Statistical Learning (ISLR)**. The labs are designed to bridge theory and practice, offering hands-on coding exercises to reinforce the statistical concepts presented in the book.
+This repository provides Python implementations of the labs from the book **Introduction to Statistical Learning**
 
----
-
-## Features
 - Python-based implementations of all ISLR labs.
-- Clear and structured examples for each statistical method.
+- Clear and structured examples for each machine learning method.
 - Includes data loading, manipulation, visualization, and analysis.
-- Practical exercises for self-assessment and deeper understanding.
+- Practical exercises for deeper understanding.
 
 ---
 
@@ -101,7 +98,7 @@ This repository provides Python implementations of the labs from the book **Intr
 -  **Lab 12.2**: K-Means and Hierarchical Clustering  
   Cluster observations into meaningful groups.
 
-## 📊 Datasets Used
+## Datasets Used
 
 This repository includes examples and exercises using the following datasets:
 
