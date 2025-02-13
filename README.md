@@ -94,9 +94,7 @@ This repository provides Python implementations of the labs from the book **Intr
 -  **Lab 12.2**: K-Means and Hierarchical Clustering  
   Cluster observations into meaningful groups.
 
-## Datasets Used
-
-This repository includes examples and exercises using the following datasets:
+## Datasets 
 
 ### Auto Data
 - **Notes**: Contains information about various car models, their performance metrics, and specifications.
