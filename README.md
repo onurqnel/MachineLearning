@@ -7,8 +7,6 @@ This repository provides Python implementations of the labs from the book **Intr
 - Includes data loading, manipulation, visualization, and analysis.
 - Practical exercises for deeper understanding.
 
-## Table of Contents
-
 ### Chapter 1: Introduction
 -  **Lab 1.1**: Setting Up Your Python Environment  
   A quick guide to setting up Python, installing necessary libraries, and preparing for statistical analysis.
